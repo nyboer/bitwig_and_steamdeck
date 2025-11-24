@@ -1,0 +1,7 @@
+[Unit]
+Description=Run Bitwig Connect profile script for %i
+After=pipewire.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/bitwig-connect-launch.sh %i

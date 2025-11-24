@@ -1,0 +1,2 @@
+# Trigger Bitwig Connect profile script on USB device add
+SUBSYSTEM=="sound", ENV{ID_MODEL}=="Bitwig_Connect", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="bitwig-connect@%k.service"
